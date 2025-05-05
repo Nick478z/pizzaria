@@ -82,12 +82,19 @@ header a{
 
 .secao2{
     min-height: 100vh;
-    background-color: rgb(126, 38, 38);
+    background-color: #c8ca3a;
 }
 
 .secao3{
     min-height: 100vh;
-    background-color: aqua;
+    background-color: #7e2626;
+}
+
+footer{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: #ad3d3d;
 }
 
 h2{
@@ -103,7 +110,8 @@ h2{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 45px;
-    margin-left: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .card{
@@ -111,8 +119,7 @@ h2{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width: 230px;
-    padding: 11px;
+    padding: 8px;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
     transition: 0.5s;
@@ -123,6 +130,7 @@ h2{
     width: 120px;
     display: block;
     margin: auto;
+    padding: 8px;
 }
 
 .card:hover{
@@ -131,24 +139,24 @@ h2{
 
 .content3{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 0 40px
 }
 
 .avaliacao{
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border: 1px solid black;
-    width: 280px;
-    padding: 20px;
+    border: 1px solid black;  
+    padding: 40px;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
 }
 
-@media (max-width: 758px) {
+@media (max-width: 858px) {
     header{
         position: relative;
     }
@@ -157,20 +165,36 @@ h2{
         display: none;
     }
 
+    .secao1{
+        background: linear-gradient( #ad3d3d 100%, #6e4646 0%);
+        font-size: 15px;
+    }
+
+    h1{
+        font-size: 17px;
+    }
+
     .content2 {
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
-        margin-left: 0;
-        gap: 10px;
-        padding: 15px;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 200px;
+        gap: 16px;
+        padding: 18px;
+        font-size: 12px;
     }
 
     .content2 .card:nth-child(n+4) {
         display: none;
+    }
+
+    .content3 .avaliacao:nth-child(n+4){
+        display: none;
+    }
+
+    .content3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
     }
 }
